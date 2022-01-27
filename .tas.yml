@@ -1,4 +1,5 @@
 ---
+framework: jest
 postMerge:
   pattern:
     - 'test/*.unittest.js'
