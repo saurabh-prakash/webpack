@@ -9,8 +9,11 @@ preMerge:
   pattern:
     - 'test/*.unittest.js'
 preRun:
+  env:
+    NODE_OPTIONS: "--max-old-space-size=4096 --experimental-vm-modules --trace-deprecation"
   command:
     - yarn run setup
+    - env
 postRun:
   command:
     - node --version
