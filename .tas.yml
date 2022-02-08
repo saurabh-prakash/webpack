@@ -12,4 +12,5 @@ preRun:
 postRun:
   command:
     - node --version
+tier: medium
 version: 2.0
