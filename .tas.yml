@@ -2,15 +2,17 @@
 framework: jest
 postMerge:
   env:
-    NODE_OPTIONS: "--max-old-space-size=4096 --experimental-vm-modules --trace-deprecation"
+    NODE_OPTIONS: "--max-old-space-size=7000 --experimental-vm-modules --trace-deprecation"
   pattern:
     - 'test/*.unittest.js'
 preMerge:
+  env:
+    NODE_OPTIONS: "--max-old-space-size=7000 --experimental-vm-modules --trace-deprecation"
   pattern:
     - 'test/*.unittest.js'
 preRun:
   env:
-    NODE_OPTIONS: "--max-old-space-size=4096 --experimental-vm-modules --trace-deprecation"
+    NODE_OPTIONS: "--max-old-space-size=7000 --experimental-vm-modules --trace-deprecation"
   command:
     - yarn run setup
     - env
