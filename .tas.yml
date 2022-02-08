@@ -1,6 +1,8 @@
 ---
 framework: jest
 postMerge:
+  env:
+    NODE_OPTIONS: "--max-old-space-size=4096 --experimental-vm-modules --trace-deprecation"
   pattern:
     - 'test/*.unittest.js'
 preMerge:
